@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <!--1. Addition of two numbers -->
+
+    <script>
+        function addition(a,b){
+            const sum=a+b;
+            console.log(`The addition of Two numbers is: ${sum}`);
+        }
+
+        addition(10,20);
+
+
+        //  2. find the maximum number among two numbers
+
+        function maximumNumber(a,b){
+            if(a>b){
+                console.log(`${a} is greater`);
+            }
+
+            else{
+                console.log(`${b} is greater`)
+            }
+
+        }
+        maximumNumber(50,25);
+
+
+        // OR
+
+        function getAmongTwo(c,d){
+            if (c>d){
+                console.log(`${c} is grater than ${d}`)
+            }
+
+            else if(c<d){
+                console.log(`${c} is less than ${d}`);
+            }
+        
+        else {
+            console.log(`Both are Equal`)
+        }
+    }
+    getAmongTwo(15,20);
+
+
+
+    // 1.function:Argument with return type.
+    // find simple Interest
+
+    function calSimpleInterest(p,r,t){
+        const si=p*r*t/100;
+        return si;
+    }
+
+    const simpleInterest=calSimpleInterest(5000,12,4);
+    console.log(`The Simple Interest is : ${simpleInterest}`);
+
+
+
+    // 2.function: Argument with No return type.
+
+    // calculate area of rectangle
+
+    function calAreaOfRectangle(lenght,breadth){
+        const area=lenght*breadth;
+        console.log(`The area of Rectangle is : ${area}`);
+
+    }
+    calAreaOfRectangle(20,10);
+
+
+    // 3.function: No Argument with return type
+
+    function calPerimeter(){
+        const lenght=20;
+        const breadth=25;
+        const sum=lenght*breadth;
+        return sum;
+    }
+    const perimeter=calPerimeter(20,5);
+    console.log(`the perimeter is : ${ perimeter}`);
+
+    // 4.function:No Argument and No Return
+
+    function name(){
+        console.log(`hello sakshi`) 
+    }
+    name();
+
+
+    // find even number
+
+    function findEvenNumber(num){
+        if(num%2==0){
+            console.log(`The Number is even`);
+        }
+        else{
+            console.log(`The Number is Odd`);
+        }
+    }
+
+    findEvenNumber(20);
+
+    // find radius of circle
+
+    function calRadiusOfCircle(r){
+        let radiusOfCircle = 3.14*r*r;
+        return radiusOfCircle;
+    }
+
+    let radiusOfCircle= calRadiusOfCircle(25);
+    console.log(`The Radius of Circle is: ${radiusOfCircle}`);
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
