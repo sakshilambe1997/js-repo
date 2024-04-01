@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="hello()">hello</button>
+    <button type="button" onclick="goodMorning()">Good Morning</button>
+    <p id="greetings">No Greetings Yet</p>
+
+    <script>
+        function hello(){
+            const greetingsElement=document.getElementById('greetings');
+            greetingsElement.innerText="Hello,how are you?";
+        }
+
+        function goodMorning(){
+            const greetingsElement=document.getElementById('greetings');
+            greetingsElement.innerText="Good Morning, Have a nice day."
+        }
+    </script>
+</body>
+</html>
