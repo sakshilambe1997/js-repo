@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Togger</title>
+    <style>
+        body {
+            background: #1CD8D2;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #93EDC7, #1CD8D2);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .bulb-container {
+            background-color: white;
+            height: 400px;
+            width: 350px;
+            margin: 80px auto;
+            border-radius: 20px;
+            box-shadow: 0 0 12px 5px grey;
+            padding: 20px;
+
+        }
+
+        .app-heading {
+            text-align: center;
+            color: #00997a;
+            margin: 0;
+        }
+
+        .bulb-img {
+            height: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-container {
+
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 20px auto;
+
+
+        }
+
+        .bulb-btn {
+            background: #1CD8D2;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #93EDC7, #1CD8D2);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            
+           padding: 7px 20px;
+           width: 80px;
+            font-size: 18px;
+            border-radius: 10px;
+            font-weight: bold;
+            border: 2px solid #00cca3;
+            cursor: pointer;
+
+        }
+
+        .bulb-btn:hover {
+            background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+        }
+
+            
+        @media screen and (min-width: 300px) and (max-width: 500px) {
+        .bulb-container{
+           width: 60%;
+           height: auto;
+          
+        }
+
+    
+        .bulb-img {
+            height: 200px;  
+        }
+
+        .btn-container {
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        .bulb-btn {
+            padding: 5px 15px;
+            width: 60px;
+            font-size: 15px;
+        }
+
+      }
+
+     
+    </style>
+</head>
+
+<body>
+    <div class="bulb-container">
+        <h1 class="app-heading">BULB  TOGGER</h1>
+        <br><br>
+        <img src="bulb-off.png" class="bulb-img" id="img" />
+
+        <div class="btn-container">
+            <button type="button" class="bulb-btn" onclick="bulbOn()">ON</button>
+            <button type="button" class="bulb-btn" onclick="bulbOff()">OFF</button>
+        </div>
+    </div>
+
+    <script>
+        function bulbOn() {
+            const bulbElement = document.getElementById('img');
+            bulbElement.src = "bulb-on.png";
+
+        }
+
+        function bulbOff() {
+            const bulbElement = document.getElementById('img');
+            bulbElement.src = "bulb-off.png";
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
