@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Of Rectangle Calci</title>
+    <style>
+        body{
+            background-image: radial-gradient( circle farthest-corner at 92.3% 71.5%,  rgba(83,138,214,1) 0%, rgba(134,231,214,1) 90% );
+
+        }
+        .container{
+           
+            width: 280px;
+            margin: 100px auto;
+            border-radius: 10px;
+            padding: 20px;
+         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);;
+         box-shadow:  0 1px 12px 5px gray;
+        }
+
+        .heading{
+            font-size: 25px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .inputbox{
+            width: 230px;
+            height: 30px;
+            display: block;
+            margin: 2px auto;
+            border-radius: 5px;
+            border: 1px solid black;
+            font-size: 20px;
+            padding: 6px;
+        }
+
+        .btn-container{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn{
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+            border: none;
+            padding: 5px 15px;
+            width: 120px;
+            color: white;
+            font-size:20px ;
+            border-radius: 10px;  
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background-color: #8EC5FC;
+          background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+          color: black;   
+        }
+
+        .result{
+            text-align: center;
+        }
+
+
+        @media screen and (min-width:300px) and (max-width:450px){
+
+            .heading{
+            font-size: 22px;
+        
+        }
+            .container{
+           height: auto;
+           width: 70%;
+           margin: 100px auto;
+        
+       }
+
+      
+       .inputbox{
+           width: 200px;
+           height: 30px;
+           font-size: 18px;
+           padding: 6px;
+       }
+
+
+       .btn{
+           padding: 5px 15px;
+           width: 100px;
+           font-size:15px;
+       }
+
+       .result{
+           text-align: center;
+       }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Area Of Rectancle</h1>
+
+        <input type="text" class="inputbox" placeholder="Enter Length" id="first-number"/>
+        <br>
+        <input type="text" class="inputbox" placeholder="Enter Breadth" id="second-number" />
+        <br>
+        <h3 class="result" id="result">Result will displayed here</h3>
+
+        <br>
+        
+        <div class="btn-container">
+        <button type="button" class="btn" onclick="sum()">Calculate</button>
+        <button type="button" class="btn" onclick="reset()">Reset</button>
+    </div>
+
+    </div>
+
+    <script>
+
+        function sum(){
+            const input1=document.getElementById("first-number");
+            const input2=document.getElementById("second-number");
+            const resultElement=document.getElementById("result");
+            const result=parseInt(input1.value)*parseInt(input2.value);
+            resultElement.innerText=`Area of rectangle is : ${result}`;
+        }
+
+        function reset(){
+            const input1=document.getElementById("first-number");
+            input1.value=""
+            const input2=document.getElementById("second-number");
+            input2.value=""
+            const resultElemet=document.getElementById("result");
+            resultElemet.innerText=" Result will displayed here "
+        }
+    </script>
+    
+</body>
+</html>
